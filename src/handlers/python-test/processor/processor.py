@@ -29,10 +29,10 @@ def process_excel(file_path):
     df = df[list(column_mapping.values())]
 
     # # # Convert date columns to ISO format and handle nulls
-    # date_columns = ['LiQ - Date Of Birth', 'LiQ - Hired Date', 'LiQ - Separation date']
-    # for col in date_columns:
-    #     if col in df.columns:
-    #         df[col] = pd.to_datetime(df[col], errors='coerce').dt.strftime('%Y-%m-%dT%H:%M:%S')
+    date_columns = ['LiQ - Date Of Birth', 'LiQ - Hired Date', 'LiQ - Separation date']
+    for col in date_columns:
+        if col in df.columns:
+            df[col] = pd.to_datetime(df[col], errors='coerce').dt.strftime('%Y-%m-%dT%H:%M:%S')
 
 
     for col in df.columns:

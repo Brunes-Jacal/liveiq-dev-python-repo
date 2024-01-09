@@ -1,6 +1,3 @@
-.env
-airtable_module/__pycache__/
-aws/__pycache__/
 crawler/__pycache__/
 jacal_secrets/__pycache__/
 processor/__pycache__/
